@@ -1,0 +1,17 @@
+{
+  "name": "kamalaa-sri-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Kamalaa Sri - Computer Science and Engineering Undergraduate",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=/",
+    "start": "npx live-server --port=3000 --open=/",
+    "build": "echo 'No build process needed for static HTML/CSS/JS'"
+  },
+  "keywords": ["portfolio", "html", "css", "javascript"],
+  "author": "Kamalaa Sri",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

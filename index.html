@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamalaa Sri - Portfolio</title>
+    <meta name="description" content="Computer Science and Engineering Undergraduate - Portfolio Website">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <span class="logo">KS</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="nav-mobile">
+                <button class="theme-toggle mobile-theme" id="mobile-theme-toggle">
+                    <i class="fas fa-moon" id="mobile-theme-icon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars" id="nav-toggle-icon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        
+        <div class="container hero-content" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2.5rem;">
+            <!-- Profile Image -->
+            <div class="hero-profile-img" style="flex: 0 0 320px; display: flex; justify-content: center; align-items: center;">
+                <img src="profile.jpg" alt="Kamalaa Sri Profile Photo"
+                    class="fade-in-profile"
+                    style="width: 320px; height: 320px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; border: 6px solid #fff; box-shadow: 0 6px 32px rgba(0,0,0,0.12);" />
+            </div>
+            <!-- Hero Text Content -->
+            <div class="hero-main-content" style="flex: 1 1 320px; min-width: 280px;">
+                <h1 class="hero-title">
+                    <span id="typewriter">HEY I'M KAMALAA SRI</span>
+                    <span class="cursor">|</span>
+                </h1>
+                
+                <p class="hero-subtitle">Computer Science And Engineering Undergrad</p>
+                
+                <div class="hero-buttons">
+                    <a href="Kamalaa_%20sri_cv.pdf" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-file-alt"></i>
+                        View Resume
+                    </a>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">
+                        Learn More
+                    </button>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kamalaa-sri-7795a1288" target="_blank" class="social-link linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Kamalaa-Sri" target="_blank" class="social-link github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/reine_blanchet/" target="_blank" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                
+                <button class="scroll-indicator" onclick="scrollToSection('about')">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+            </div>
+            <style>
+            .fade-in-profile {
+                opacity: 0;
+                animation: fadeInProfile 1.2s ease-in-out forwards;
+            }
+            @keyframes fadeInProfile {
+                from { opacity: 0; transform: scale(0.92);}
+                to { opacity: 1; transform: scale(1);}
+            }
+            </style>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid" style="display: flex; gap: 2.5rem; flex-wrap: wrap;">
+                <!-- Personal Info & Experience -->
+                <div class="about-left" style="flex: 1 1 320px; min-width: 300px; display: flex; flex-direction: column; gap: 2rem;">
+                    <div class="card glass" style="margin-bottom: 0;">
+                        <div class="card-header" style="align-items: center;">
+                            <div class="icon-wrapper purple">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3>Personal Info</h3>
+                        </div>
+                        <p class="card-text" style="margin-bottom: 1.5rem;">
+                            I'm a passionate Computer Science and Engineering undergraduate with a strong foundation in 
+                            software development and a keen interest in creating innovative solutions. I enjoy working 
+                            with modern technologies and am always eager to learn new skills.
+                        </p>
+                        <div class="info-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 1.5rem;">
+                            <div class="info-item">
+                                <span class="info-label">Location:</span>
+                                <span class="info-value">India</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Status:</span>
+                                <span class="info-value">Available for work (Freelancing)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Degree:</span>
+                                <span class="info-value">B.Tech CSE</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Languages:</span>
+                                <span class="info-value">English, Tamil</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume-button-container" style="margin: 1.5rem 0 0.5rem 0;">
+                        <a href="Kamalaa_%20sri_cv.pdf" download class="btn btn-primary btn-large" style="width: 100%; text-align: center;">
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                    <div class="card glass" style="margin-top: 0;">
+                        <div class="card-header" style="align-items: center;">
+                            <div class="icon-wrapper orange">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>Education</h3>
+                        </div>
+                        <div class="timeline" style="margin-top: 1rem;">
+                            <div class="timeline-item" style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem;">
+                                <div class="timeline-dot" style="margin-top: 0.5rem;"></div>
+                                <div class="timeline-content">
+                                    <h4 style="margin-bottom: 0.2rem;">Kalasalingam Academy Of Research And Education</h4>
+                                    <p class="timeline-company" style="margin-bottom: 0.1rem;">Computer Science and Engineering</p>
+                                    <p class="timeline-period" style="font-size: 0.95em; color: #888; margin-bottom: 0.2rem;">2023 - 2027</p>
+                                    <p class="timeline-desc" style="margin-bottom: 0;">Pursuing Bachelor's degree in CSE,specialized in Data Science</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div class="timeline-dot" style="margin-top: 0.5rem;"></div>
+                                <div class="timeline-content">
+                                    <h4 style="margin-bottom: 0.2rem;">Keren Public School</h4>
+                                    <p class="timeline-company" style="margin-bottom: 0.1rem;">Grade XII</p>
+                                    <p class="timeline-period" style="font-size: 0.95em; color: #888; margin-bottom: 0.2rem;">2022-2023</p>
+                                    <p class="timeline-desc" style="margin-bottom: 0;">Completed Higher Secondary Education with a focus on Science</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skills -->
+                <div class="about-right" style="flex: 1 1 320px; min-width: 300px; display: flex; flex-direction: column; gap: 2rem;">
+                    <!-- Technical Skills -->
+                    <div class="card glass">
+                        <div class="card-header" style="align-items: center;">
+                            <div class="icon-wrapper green">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Technical Skills</h3>
+                        </div>
+                        <div class="skills-grid" style="display: flex; flex-wrap: wrap; gap: 0.7rem 1rem; margin-top: 1rem;">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Tableau Dashboarding</span>
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">R Programming</span>
+                            <span class="skill-tag">C</span>
+                        </div>
+                    </div>
+                    <!-- Professional Skills -->
+                    <div class="card glass">
+                        <div class="card-header" style="align-items: center;">
+                            <div class="icon-wrapper blue">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h3>Professional Skills</h3>
+                        </div>
+                        <div class="skills-grid" style="display: flex; flex-wrap: wrap; gap: 0.7rem 1rem; margin-top: 1rem;">
+                            <span class="skill-tag">Effective Communication</span>
+                            <span class="skill-tag">Teamwork</span>
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Adaptability</span>
+                            <span class="skill-tag">Time Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">
+                    Here are some of my recent projects that showcase my skills and experience in web development
+                </p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- Featured Projects -->
+            <div class="projects-section">
+                <h3 class="projects-section-title">
+                    <i class="fas fa-rocket"></i>
+                    Featured Projects
+                </h3>
+                <div class="projects-grid featured">
+                    <div class="project-card featured">
+                        <div class="project-image">
+                            <img src="kyara.png" alt="Kyara Beverages Website">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://kamalaa-sri.github.io/KyaraBeverages.github.io/" class="project-link" target="_blank" title="View Live">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Kamalaa-Sri/KyaraBeverages.github.io" class="project-link" target="_blank" title="View Source">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Product based Website</h4>
+                            <p class="project-description">
+                                A modern, responsive website built for Kyara Beverages as a sample.It designed to showcase products, brand story, and contact information. Built with HTML, CSS, and JavaScript for a seamless user experience.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Responsive Design</span>
+                                <span class="tech-tag">User friendly</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card featured">
+                        <div class="project-image">
+                            <img src="heal.png" alt="Heal - Mental Health Platform">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://darling-pithivier-95f40e.netlify.app/" class="project-link" target="_blank" title="View Live">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Kamalaa-Sri/FrontendBattle" class="project-link" target="_blank" title="View Source">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Heal Earth - Event organised by GreenPulse foundation </h4>
+                            <p class="project-description" style="color: inherit; background: none; font-size: 1em; margin-bottom: 1em;">
+                                An event website designed for the "Heal Earth" initiative by GreenPulse Foundation. Developed using React, TypeScript, and Tailwind CSS. This project was built for an event organized by GreenPulse Foundation.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Framer Motion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- All Projects -->
+            <div class="projects-section">
+                <h3 class="projects-section-title">
+                    <i class="fas fa-code"></i>
+                    All Projects
+                </h3>
+                <div class="projects-grid all">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="lamira.png" alt="E-commerce application">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://kamalaasri1325.wixsite.com/la-mira" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">E-commerce Application</h4>
+                            <p class="project-description">
+                                A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Socket.io</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Weather Dashboard">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Web application(In progress)</h4>
+                            <p class="project-description">
+                                A responsive weather dashboard that displays current weather conditions and forecasts for multiple cities with beautiful data visualizations.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Chart.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">
+                    I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
+                </p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="card glass">
+                        <div class="card-header">
+                            <div class="icon-wrapper purple">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Let's Connect</h3>
+                        </div>
+                        <p class="card-text">
+                            I'm currently looking for new opportunities and interesting projects. Whether you have a question 
+                            or just want to say hi, I'll try my best to get back to you!
+                        </p>
+                        
+                        <div class="contact-items">
+                            <div class="contact-item email">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <p class="contact-label">Email</p>
+                                    <p class="contact-value">kamalaasri1325@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item phone">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <p class="contact-label">Phone</p>
+                                    <p class="contact-value">+91 7200465000</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item location">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <p class="contact-label">Location</p>
+                                    <p class="contact-value">India</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item time">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <p class="contact-label">Response Time</p>
+                                    <p class="contact-value">Within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="card glass">
+                        <div class="card-header">
+                            <div class="icon-wrapper blue">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <h3>Send Message</h3>
+                        </div>
+                        
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" name="name" required placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required rows="6" placeholder="Tell me about your project or just say hello!"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-large" id="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                <span id="submit-text">Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Logo and Description -->
+                <div class="footer-section">
+                    <div class="footer-logo">KS</div>
+                    <p class="footer-description">
+                        Computer Science and Engineering undergraduate passionate about creating innovative solutions 
+                        and building amazing web experiences.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home" class="footer-link">Home</a>
+                        <a href="#about" class="footer-link">About</a>
+                        <a href="#projects" class="footer-link">Projects</a>
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Connect With Me</h4>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/kamalaa-sri-7795a1288" target="_blank" class="footer-social-link linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer-social-link github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="footer-social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:kamalaa.sri@example.com" class="footer-social-link email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <p class="footer-social-text">
+                        Feel free to reach out for collaborations or just a friendly hello!
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <span>Made with</span>
+                        <i class="fas fa-heart heart"></i>
+                        <span>by Kamalaa Sri</span>
+                    </div>
+                    <div class="footer-bottom-right">
+                        <p>© 2024 Kamalaa Sri. All rights reserved.</p>
+                        <button onclick="scrollToTop()" class="back-to-top">Back to top</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
